@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+#include<string>
+struct student {
+	int age;
+	string name;
+	int sorce;
+};
+int main() {
+	struct student s1;//通过“.”实现赋值
+	s1.name = "张三";
+	s1.age = 18;
+	s1.sorce = 90;
+	cout << "姓名" << s1.name << "年龄" << s1.age << "分数" << s1.sorce << endl;
+
+	struct student s2{18,"李四",60 };//按照变量顺序来输入值
+	cout << "姓名" << s2.name << "年龄" << s2.age << "分数" << s2.sorce << endl;
+	system("pasue");
+	return 0;
+}
