@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+#include<string>
+struct student {
+	int age;
+	string name;
+	int scorce;
+};
+int main() {
+	//创建结构体数组
+	struct student stuArray[3] = {
+		{18,"小明",88},
+		{20,"小李",99},
+		{88,"小高",60}
+	};
+	//给结构体数组变量输入值
+	stuArray[1].age = 20;
+	stuArray[1].name = "小赵";
+	for (int i = 0; i < 3;i++) {
+		cout << "姓名：  " << stuArray[i].name << "年龄： " << stuArray[i].age << "分数：  " << stuArray[i].scorce << endl;
+	}
+	system("pasue");
+	return 0;
