@@ -1,0 +1,17 @@
+#include<istream>
+using namespace std;
+#include<string>
+struct student {
+	int age;
+	string name;
+	int score;
+};
+int main() {
+	struct student st1{18, "张三", 80};
+	struct student* p = &st1;//结构体指针的使用
+	p->age = 29;//可通过->来调用指针地址
+	p->score = 99;
+	cout << "姓名" << p->name<< "年龄" <<p->age << "分数" << p->score << endl;
+	system("pasue");
+	return 0;
+}
